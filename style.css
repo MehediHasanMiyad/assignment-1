@@ -6,35 +6,46 @@
     --text-muted: #98a3b8;
     --accent-color: #38bdf8;
     --font-main: 'Poppins', sans-serif;
+
+
+
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 html {
     scroll-behavior: smooth;
 
+
 }
 
 body {
     font-family: var(--font-main);
-    background-color: #0f172a;
+    background-color: var(--primary-dark);
     color: var(--text-main);
     line-height: 1.6;
+
 }
+
 a {
     text-decoration: none;
     color: inherit;
+
+
 }
 
 ul {
     list-style: none;
+
+
 }
 
-.navbar-header{
+.navbar-header {
     background-color: rgba(15, 23, 42, 0.95);
     position: fixed;
     top: 0;
@@ -42,6 +53,17 @@ ul {
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo img {
@@ -49,16 +71,12 @@ ul {
     display: block;
 }
 
-.navbar{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr)
+.nav-links {
+    display: flex;
+    gap: 30px;
 }
-.nav-links{
-     display: flex;
-     gap: 5px;
-   
-}
-.nav-links a{
+
+.nav-links a {
     font-size: 15px;
     font-weight: 500;
     color: var(--text-muted);
@@ -77,11 +95,25 @@ ul {
     font-weight: 600;
     font-size: 14px;
     transition: background 0.3s;
-
-
 }
+
 .btn-nav:hover {
-    background-color:#1d4ed8;
+    background-color: #1d4ed8;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 60px;
+
+
+
+
 }
 
 .hero-overlay {
@@ -90,31 +122,37 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)),
-    url(./assets/banner.jpg);
+    background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), 
+                      url('./assets/banner.jpg');
     background-size: cover;
     background-position: center;
     z-index: 1;
 
 
+
+
+
 }
 
-.hero-content{
-    position:relative;
+.hero-content {
+    position: relative;
     z-index: 2;
     max-width: 800px;
 }
-.hero-content h1{
+
+.hero-content h1 {
     font-size: 56px;
     font-weight: 700;
     margin-bottom: 20px;
     letter-spacing: -1px;
+
+
+
 }
 
 .hero-content h1 i {
     color: var(--text-muted);
     font-style: italic;
-
 }
 
 .hero-content p {
@@ -125,11 +163,13 @@ ul {
     margin-left: auto;
     margin-right: auto;
 
+
+
 }
 
-.btn-hero{
+.btn-hero {
     background-color: var(--primary-blue);
-    color:var(--text-main);
+    color: var(--text-main);
     padding: 15px 35px;
     border-radius: 6px;
     font-size: 16px;
@@ -137,19 +177,19 @@ ul {
     display: inline-block;
     transition: transform 0.3s, background 0.3s;
 
+
+
 }
 
 .btn-hero:hover {
     background-color: #1d4ed8;
     transform: translateY(-2px);
-
 }
 
 .speakers-section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px 20px;
-
 }
 
 .section-title {
@@ -165,6 +205,8 @@ ul {
     margin-bottom: 60px;
     font-size: 16px;
 
+
+
 }
 
 .speakers-grid {
@@ -179,6 +221,8 @@ ul {
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: transform 0.3s;
+
+
 }
 
 .speaker-card:hover {
@@ -189,12 +233,13 @@ ul {
     width: 100%;
     height: 250px;
     object-fit: cover;
+
+
 }
 
 .speaker-info {
     padding: 25px;
 }
-
 
 .track-label {
     color: var(--accent-color);
@@ -204,6 +249,8 @@ ul {
     letter-spacing: 1px;
     display: inline-block;
     margin-bottom: 10px;
+
+
 }
 
 .speaker-info h3 {
@@ -215,12 +262,15 @@ ul {
 .speaker-title {
     color: var(--text-muted);
     font-size: 14px;
-}
 
+
+}
 
 .pricing-section {
     background-color: rgba(30, 41, 59, 0.4);
     padding: 100px 20px;
+
+
 
 
 }
@@ -242,6 +292,7 @@ ul {
     border: 1px solid rgba(255, 255, 255, 0.05);
     position: relative;
 
+
 }
 
 .pricing-card.featured {
@@ -257,6 +308,8 @@ ul {
     color: var(--text-muted);
     display: block;
     margin-bottom: 20px;
+
+
 }
 
 .price {
@@ -271,14 +324,12 @@ ul {
     display: block;
     margin-bottom: 30px;
 
-}
 
+}
 
 .features-list {
     text-align: left;
     margin-bottom: 40px;
-
-
 }
 
 .features-list li {
@@ -298,6 +349,8 @@ ul {
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s;
+
+
 }
 
 .btn-outline:hover {
@@ -316,12 +369,11 @@ ul {
     transition: background 0.3s;
 
 
+
 }
 
 .btn-featured:hover {
-
     background-color: #1d4ed8;
-
 }
 
 .sponsors-section {
@@ -330,6 +382,7 @@ ul {
     padding: 100px 20px;
     text-align: center;
 
+    
 }
 
 .sponsors-container {
@@ -339,8 +392,6 @@ ul {
     gap: 60px;
     margin-top: 40px;
     flex-wrap: wrap;
-
-
 }
 
 .sponsor-card {
@@ -358,7 +409,6 @@ ul {
 
 .sponsor-card:hover {
     opacity: 1;
-
 }
 
 .footer-section {
@@ -376,18 +426,33 @@ ul {
     font-size: 14px;
     color: var(--text-muted);
 
-
 }
 
 .footer-links {
     display: flex;
     gap: 20px;
-
-
 }
 
 .footer-links a:hover {
     color: var(--text-main);
 }
 
-
+@media (max-width: 968px) {
+    .speakers-grid {
+        grid-template-columns: 1fr;
+    }
+    .pricing-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero-content h1 {
+        font-size: 38px;
+    }
+}
